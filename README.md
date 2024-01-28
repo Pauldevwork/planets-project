@@ -22,26 +22,6 @@ we also tell it that comments are marked with '#' and the colunms are true becau
 
 The IF conditional then pushes the data the the empty array 'habitablePlanets'.
 
-fs.createReadStream('kepler_data.csv')
-    .pipe(parse({
-        comment: '#',
-        columns: true,
-    }))
-    .on('data', (data) => {
-        if(isHabitablePlanet(data)) {
-            habitablePlanets.push(data);
-        }
-})
-.on('error', (err) => {
-    console.log(err);
-})
+![Screenshot 2024-01-28 005644](https://github.com/Pauldevwork/planets-project/assets/146097501/639c6143-53f3-4ee2-82af-0d8f12926fbd)
 
-.on('end', () => {
-    console.log(habitablePlanets.map((planet) => {
-        return planet['kepler_name'];
-    }));
-    console.log(`${habitablePlanets.length} habitable planets found!`);
-});
-
-
-we then 'end' with our returned data with the planets names, we print out the planets names using a template string .length.
+We then 'end' with our returned data with the planets names, we print out the planets names using a template string .length.

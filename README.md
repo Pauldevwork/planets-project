@@ -3,6 +3,7 @@ Using Kepler data, I have filtered through it to find potential habitable planet
 I downloaded Nasa's Kepler data from here https://exoplanetarchive.ipac.caltech.edu/docs/data.html  
 
 KOI Table (Cumulative list)
+![Screenshot 2024-01-28 003232](https://github.com/Pauldevwork/planets-project/assets/146097501/afd4ab67-03d3-4215-90ca-9f95bf0b61a4)
 
 If this image does not load correctly then visit the link above and download the csv (comma seperated value) file and you will have the data to try this out yourself!
 
@@ -36,6 +37,7 @@ fs.createReadStream('kepler_data.csv')
 .on('error', (err) => {
     console.log(err);
 })
+
 .on('end', () => {
     console.log(habitablePlanets.map((planet) => {
         return planet['kepler_name'];

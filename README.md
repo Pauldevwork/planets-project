@@ -11,15 +11,11 @@ The function below uses the strict equality operator to search for the value 'CO
 to make sure it returns ONLY the specific criteria we are interested in, ie, what is the median temperature (koi_insol 0.36 && 1.11) 
 and also the enery they recieve from their parent sun (koi_prad < 1.6).
 
+![Screenshot 2024-01-28 005506](https://github.com/Pauldevwork/planets-project/assets/146097501/3825ee67-063b-45a5-b7a0-0cb473e68a9e)
+
 This parses through 9000+ potential planets in Keplers data, run the code and see how many planets you can find! (i'll give you a hint, I found 8!)
 
-![Screenshot 2024-01-28 005353](https://github.com/Pauldevwork/planets-project/assets/146097501/38f9d4fe-9eea-4dc9-9df0-8e3b8095da27)
 
-function isHabitablePlanet(planet) {
-    return planet['koi_disposition'] === 'CONFIRMED'
-    && planet['koi_insol'] > 0.36 && planet['koi_insol'] < 1.11
-    && planet['koi_prad'] < 1.6;
-}
 
 This fs method from csv-parse nmp package creates a 'pipe' between the csv file to our index.js, 
 we also tell it that comments are marked with '#' and the colunms are true because we need the column data for our filter to work.

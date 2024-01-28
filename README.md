@@ -13,6 +13,8 @@ and also the enery they recieve from their parent sun (koi_prad < 1.6).
 
 This parses through 9000+ potential planets in Keplers data, run the code and see how many planets you can find! (i'll give you a hint, I found 8!)
 
+![Screenshot 2024-01-28 005353](https://github.com/Pauldevwork/planets-project/assets/146097501/38f9d4fe-9eea-4dc9-9df0-8e3b8095da27)
+
 function isHabitablePlanet(planet) {
     return planet['koi_disposition'] === 'CONFIRMED'
     && planet['koi_insol'] > 0.36 && planet['koi_insol'] < 1.11
